@@ -34,5 +34,7 @@ genres_df = pd.DataFrame(genres_objs)
 today = datetime.today().strftime("%Y%m%d")
 genres_df["run_date"] = today
 
- 
+# save data
+genres_df.to_csv("data/enao-genres-%s.csv" % today, index = False)
+genres_df.to_csv("enao-genres-latest.csv", index = False)
 

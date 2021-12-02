@@ -24,7 +24,7 @@ jobs:
         uses: ./.github/actions/commit
         with:
           message: new raw enao genre data
-          what: data/
+          what: enao-genres-latest.csv data/
       - name: Install R
         uses: r-lib/actions/setup-r@v1
         with:

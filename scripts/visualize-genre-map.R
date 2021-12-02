@@ -72,7 +72,7 @@ ggsave(filename = paste0("img/", format(Sys.Date(), "%Y%m%d"), "_enao-all-map.jp
        plot = enao.plot,
        device = "jpeg", width = 7, height = 9, units = "in")
 
-ggsave(filename = "enao-all-map.jpg",
+ggsave(filename = "enao-all-map-latest.jpg",
        plot = enao.plot,
        device = "jpeg", width = 7, height = 9, units = "in")
 
