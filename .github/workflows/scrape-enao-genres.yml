@@ -44,4 +44,4 @@ jobs:
         uses: ./.github/actions/commit
         with:
           message: new genre map graphic
-          what: enao-all-map.jpg img/
+          what: enao-all-map-latest.jpg img/
