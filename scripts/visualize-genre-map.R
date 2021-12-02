@@ -1,69 +1,77 @@
-library(data.table)
+
+# init environment
+rm(list = ls())
+
 library(dplyr)
 library(tidyr)
 library(scales)
 library(ggplot2)
 
-setwd("~/Desktop/Projects/spotify-genre-map/data/")
+print(getwd())
 
-# import artist genres
-artist_genres <- read.csv("2020.07.25 - artist genres.csv")
+if (!grepl("spotify-genre-map(/)?$", getwd())) setwd("~/Desktop/Projects/spotify-genre-map/")
 
-# clean/parse genre location on every noise at once
-enao <- read.csv("2020.07.25 - every-noise-at-once-scrape.csv")
+# load latest enao genre data
+files <- list.files(path = "data", pattern = "enao-genres-[0-9]{8}.csv")
+
+enao <- read.csv(paste0("data/", sort(files)[1]))
+
+# clean enao genre data + plot it as a scatter
+enao %>%
+  mutate() %>%
+  separate(color_clean1, into = c("r", "g", "b"), sep = ",")
 
 enao.clean <- enao %>%
-    mutate(left_clean1 = as.numeric(gsub("px", "", left)),
-           top_clean1 = as.numeric(gsub("px", "", top)),
-           size_clean1 = as.numeric(gsub("%", "", size)),
-           left_clean2 = rescale(left_clean1,
-                                 from = c(min(left_clean1), max(left_clean1)),
-                                 to = c(0, 100)),
-           top_clean2 = rescale(top_clean1,
-                                from = c(min(top_clean1), max(top_clean1)),
-                                to = c(100, 0)),
-           size_clean2 = rescale(size_clean1,
-                                 from = c(min(size_clean1), max(size_clean1)),
-                                 to = c(0, 1))) %>%
-    select(genre, color, size_clean2, top_clean2, left_clean2) %>%
-    rename(size = size_clean2, top = top_clean2, left = left_clean2)
+  mutate(color_clean1 = gsub("rgb[(]|[)]| ", "", color),
+         top_clean1 = as.numeric(gsub("px", "", top)),
+         left_clean1 = as.numeric(gsub("px", "", left)),
+         size_clean1 = as.numeric(gsub("%", "", font_size)),
+         top_clean2 = rescale(top_clean1,
+                              from = c(min(top_clean1), max(top_clean1)),
+                              to = c(100, 0)),
+         left_clean2 = rescale(left_clean1,
+                               from = c(min(left_clean1), max(left_clean1)),
+                               to = c(0, 100)),
+         size_clean2 = rescale(size_clean1,
+                               from = c(min(size_clean1), max(size_clean1)),
+                               to = c(0, 1))) %>%
+  separate(color_clean1, into = c("r", "g", "b"), sep = ",") %>%
+  mutate(across(c("r", "g", "b"), ~ as.numeric(.x) / 255),
+         color_clean2 = rgb(r, g, b)) %>%
+  select(genre, color = color_clean2, size = size_clean2, top = top_clean2, left = left_clean2)
 
-# clean artist genres
-artist_genres.clean <- artist_genres %>% 
-    separate(genres, sep = "\\|", into = paste0("var", 1:15)) %>% 
-    pivot_longer(var1:var15) %>% 
-    filter(!is.na(value) & value != "") %>% 
-    select(-name) %>%
-    rename(genre = value) %>%
-    data.table()
+point_colors <- enao.clean$color
+names(point_colors) <- enao.clean$color
 
-# aggregate information and merge on every-noise-at-once data
-genres <- artist_genres.clean[, .(N = .N, S = sum(count)), by = genre] %>%
-    left_join(enao.clean, by = "genre")
+enao.plot <- enao.clean %>%
+  ggplot(aes(x = left, y = top)) +
+  geom_point(aes(color = color), size = 0.5, alpha = 0.4) +
+  geom_label(enao.clean %>% 
+               filter(genre %in% c("rock", "rap", "pop", "pop rock", "funk", 
+                                   "jazz", "focus", "metal", "folk", "techno", 
+                                   "classical")),
+             mapping = aes(x = left, y = top, label = genre), size = 4, color = "black") +
+  scale_x_continuous(name = "\u2190 more atmospheric                              more bouncy \u2192", limits = c(0, 100), expand = c(0, 0)) +
+  scale_y_continuous(name = "\u2190 more organic                              more mechanical \u2192", limits = c(0, 100), expand = c(0, 0)) +
+  scale_color_manual(values = point_colors, guide = F) +
+  labs(title = paste0("Mapping the ", 
+                      comma(nrow(enao)),
+                      " distinct musical genres on Spotify,\naccording to Every Noise at Once as of ",
+                      format(Sys.Date(), "%m/%d/%Y"))) +
+  theme_classic() +
+  theme(legend.position = "none",
+        text = element_text(size = 12,  family = "Arial"),
+        plot.title = element_text(hjust = 0.5, size = 16),
+        axis.line = element_blank(),
+        axis.text = element_blank(),
+        axis.ticks = element_blank())
 
-# plot it
-ggplot(genres, aes(x = left, y = top)) +
-    geom_density2d(aes(color = ..level..), size = 0.8, bins = 25) + 
-    stat_density2d(aes(fill = ..level..), bins = 25, geom = "polygon", alpha = 0.1) +
-    geom_point(enao.clean, mapping = aes(x = left, y = top), size = 0.1, alpha = 0.5) +
-    geom_label(enao.clean %>% 
-                   filter(genre %in% c("rock", "rap", "pop", "pop rock", "funk", 
-                                       "jazz", "focus", "metal", "folk", "techno", 
-                                       "classical")),
-               mapping = aes(x = left, y = top, label = genre), size = 4, color = "black") +
-    #geom_point(genres, mapping = aes(x = left, y = top, size = S), shape = 21, color = "black", fill = "#77bdee") +
-    #scale_color_discrete() +
-    scale_color_gradient(low = "#06D6A0", high = "#EF476F") +
-    scale_fill_gradient(low = "#06D6A0", high = "#EF476F") +
-    scale_x_continuous(name = "← more atmospheric                              more bouncy →", limits = c(0, 100), expand = c(0, 0)) +
-    scale_y_continuous(name = "← more organic                              more mechanical →", limits = c(0, 100), expand = c(0, 0)) +
-    labs(title = "Mapping my musical taste on Spotify,\naccording to Every Noise at Once") +
-    theme_classic() +
-    theme(legend.position = "none",
-          text = element_text(size = 12,  family = "Arial"),
-          plot.title = element_text(hjust = 0.5, size = 16),
-          axis.line = element_blank(),
-          axis.text = element_blank(),
-          axis.ticks = element_blank())
+# save plots
+ggsave(filename = paste0("img/", format(Sys.Date(), "%Y%m%d"), "_enao-all-map.jpg"),
+       plot = enao.plot,
+       device = "jpeg", width = 7, height = 9, units = "in")
 
-ggsave("../enao-bt-map.jpg", device = "jpeg", width = 7, height = 9, units = "in")
+ggsave(filename = "enao-all-map.jpg",
+       plot = enao.plot,
+       device = "jpeg", width = 7, height = 9, units = "in")
+
