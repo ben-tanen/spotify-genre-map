@@ -1,0 +1,17 @@
+name: 'Build pipenv'
+description: 'Install the Python package manager pipenv'
+inputs:
+  requirements:
+    description: 'Where the requirement file is stored'
+    required: true
+runs:
+  using: "composite"
+  steps: 
+    - name: Install pipenv
+      run: |
+          python -m pip install --upgrade --no-cache-dir pip
+          python -m pip install --no-cache-dir pipenv
+      shell: bash
+    - name: Build pipenv
+      run: pipenv install -r ${{ inputs.requirements }}
+      shell: bash

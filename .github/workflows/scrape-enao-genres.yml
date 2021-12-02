@@ -1,0 +1,47 @@
+name: Scrape Genres from Every Noise at Once
+on:
+  schedule:
+      - cron: '0 */6 * * *'
+  push:
+
+jobs:
+  scrape-enao-genres:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Build Env
+        uses: ./.github/actions/build_py_env
+        with:
+          requirements: data/setup/enao-scraper-reqs.txt
+      - name: Run ENAO Genre Scraper Script
+        run: pipenv run python scripts/scrape-enao-genres.py
+      - name: Commit
+        uses: ./.github/actions/commit
+        with:
+          message: new raw enao genre data
+          what: data/
+      - name: Install R
+        uses: r-lib/actions/setup-r@v1
+        with:
+          r-version: 3.6.1
+      - name: Cache R packages
+        uses: actions/cache@v1
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: r-cache-cleaner
+      - name: Install Packages
+        run: |
+          install.packages(c("dplyr", "tidyr", "scales", "ggplot2"))
+        shell: Rscript {0}
+      - name: Run Genre Mapping Script
+        run: Rscript scripts/visualize-genre-map.R
+      - name: Commit
+        uses: ./.github/actions/commit
+        with:
+          message: new genre map graphic
+          what: enao-all-map.jpg img/
