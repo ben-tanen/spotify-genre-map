@@ -12,15 +12,14 @@ print(getwd())
 if (!grepl("spotify-genre-map(/)?$", getwd())) setwd("~/Desktop/Projects/spotify-genre-map/")
 
 # load latest enao genre data
-files <- list.files(path = "data", pattern = "enao-genres-[0-9]{8}.csv")
+all_files <- list.files(path = "data", pattern = "enao-genres-[0-9]{8}.csv")
+file_to_use <- sort(all_files, decreasing = T)[1]
 
-enao <- read.csv(paste0("data/", sort(files)[1]))
+print(paste("using data from", file_to_use))
+
+enao <- read.csv(paste0("data/", file_to_use))
 
 # clean enao genre data + plot it as a scatter
-enao %>%
-  mutate() %>%
-  separate(color_clean1, into = c("r", "g", "b"), sep = ",")
-
 enao.clean <- enao %>%
   mutate(color_clean1 = gsub("rgb[(]|[)]| ", "", color),
          top_clean1 = as.numeric(gsub("px", "", top)),
@@ -42,6 +41,8 @@ enao.clean <- enao %>%
 
 point_colors <- enao.clean$color
 names(point_colors) <- enao.clean$color
+
+print(paste0("plotting data for ", nrow(enao.clean), " genres"))
 
 enao.plot <- enao.clean %>%
   ggplot(aes(x = left, y = top)) +
