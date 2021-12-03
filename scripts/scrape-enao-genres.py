@@ -23,7 +23,7 @@ driver.get(url)
 genres_elems = driver.find_elements_by_class_name("genre")
 
 genres_objs = [ ]
-for genre in genres_elems[:10]:
+for genre in genres_elems:
     genre_obj = {
         "genre": genre.get_attribute("innerText"),
         "preview_url": genre.get_attribute("preview_url"),
