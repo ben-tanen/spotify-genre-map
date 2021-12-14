@@ -39,4 +39,4 @@ jobs:
         uses: ./.github/actions/commit
         with:
           message: new enao data + genre map graphic
-          what: enao-all-map-latest.jpg img/ enao-genres-latest.csv data/
+          what: enao-all-map-latest.jpg img/*.jpg enao-genres-latest.csv data/*.csv
