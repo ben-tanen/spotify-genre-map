@@ -1,0 +1,572 @@
+genre,n_tracks,n_artists
+5th wave emo,1,1
+abstract hip hop,5,3
+acoustic pop,165,24
+adult standards,17,7
+afrobeat,4,1
+afrofuturism,2,2
+alabama indie,28,3
+alaska indie,1,1
+album rock,3,3
+albuquerque indie,23,2
+alt z,7,5
+alternative americana,7,5
+alternative country,20,10
+alternative dance,87,21
+alternative hip hop,21,16
+alternative metal,1,1
+alternative pop,2,2
+alternative r&b,16,12
+alternative rock,186,32
+alternative roots rock,1,1
+ambient folk,15,5
+ambient pop,1,1
+ambient worship,7,2
+ann arbor indie,3,1
+anthem worship,1,1
+anti-folk,11,8
+art pop,79,32
+art rock,6,6
+asheville indie,4,2
+atl hip hop,9,6
+auckland indie,14,3
+aussietronica,4,3
+austin americana,77,3
+austin rock,2,1
+austindie,81,5
+australian alternative pop,9,1
+australian alternative rock,2,2
+australian americana,1,1
+australian dance,4,2
+australian electropop,4,1
+australian garage punk,2,2
+australian hip hop,2,1
+australian indie,102,25
+australian indie folk,29,4
+australian indie rock,4,3
+australian indigenous,1,1
+australian pop,99,21
+australian psych,1,1
+australian r&b,1,1
+australian reggae fusion,2,2
+australian rock,1,1
+australian singer-songwriter,2,2
+baltimore indie,30,7
+barbadian pop,1,1
+baroque pop,20,10
+bath indie,1,1
+baton rouge indie,1,1
+bay area indie,9,6
+beatlesque,3,3
+bebop,2,2
+bedroom pop,24,7
+bedroom soul,8,4
+belgian indie,1,1
+bergen indie,1,1
+big band,1,1
+big beat,2,2
+bitpop,1,1
+black americana,17,4
+bluegrass,1,1
+blues,3,2
+blues rock,87,9
+bossbeat,1,1
+boston folk,5,3
+boston rock,56,4
+bow pop,9,2
+brass band,5,2
+brighton indie,1,1
+brisbane indie,14,3
+bristol indie,1,1
+british alternative rock,1,1
+british folk,1,1
+british indie rock,1,1
+british invasion,2,2
+british jazz,2,1
+british singer-songwriter,20,8
+british soul,10,3
+britpop,2,2
+brooklyn indie,22,8
+bubblegrunge,60,13
+bubblegum pop,1,1
+buffalo ny indie,1,1
+calgary indie,11,1
+cali rap,1,1
+canadian americana,4,2
+canadian ccm,1,1
+canadian contemporary r&b,5,2
+canadian electropop,1,1
+canadian folk,20,4
+canadian indie,40,13
+canadian indie folk,8,3
+canadian modern jazz,1,1
+canadian pop,8,5
+canadian pop punk,1,1
+canadian punk,1,1
+canadian rock,9,3
+canadian singer-songwriter,3,3
+candy pop,1,1
+ccm,113,2
+chamber folk,2,2
+chamber pop,54,22
+chamber psych,5,4
+channel pop,1,1
+charlotte nc indie,2,2
+chicago blues,2,1
+chicago indie,22,6
+chicago rap,20,7
+chicago soul,2,2
+chill pop,20,1
+chill r&b,8,3
+chillwave,52,20
+christchurch indie,1,1
+christian alternative rock,113,2
+christian indie,115,3
+christian music,113,2
+christian punk,1,1
+christian rock,1,1
+christian uplift,1,1
+classic country pop,2,2
+classic rock,42,15
+classic soul,112,21
+classic uk pop,1,1
+classical trumpet,1,1
+cleveland indie,1,1
+colombian pop,4,1
+comedy rap,3,1
+comic,21,3
+compositional ambient,2,2
+connecticut indie,2,1
+conscious hip hop,63,15
+contemporary country,3,1
+contemporary jazz,2,1
+contemporary post-bop,2,2
+contemporary r&b,1,1
+contemporary vocal jazz,1,1
+cool jazz,2,2
+country,4,3
+country dawn,2,1
+country rock,5,4
+dance pop,65,27
+dance rock,11,2
+dance-punk,3,3
+deep acoustic pop,1,1
+deep ccm,1,1
+deep euro house,2,1
+deep indie pop,3,1
+deep new americana,144,32
+deep talent show,1,1
+deep underground hip hop,2,1
+denver indie,2,1
+detroit rock,5,1
+dirty south rap,4,4
+disco,4,4
+diy emo,1,1
+dmv rap,24,1
+double drumming,7,3
+downtempo,31,9
+dream pop,15,11
+dreamo,3,2
+dublin indie,1,1
+dunedin indie,1,1
+dutch indie,4,1
+dutch indie rock,4,1
+dutch pop,1,1
+dutch singer-songwriter,4,1
+east coast hip hop,12,9
+eau claire indie,33,8
+ectofolk,13,1
+edm,9,6
+edmonton indie,1,1
+el paso indie,1,1
+electra,1,1
+electric blues,27,4
+electro,2,2
+electro house,7,4
+electroclash,1,1
+electronic rock,1,1
+electronic trap,1,1
+electronica,13,9
+electropop,55,28
+elephant 6,2,2
+emo,5,3
+emo punk,1,1
+english indie rock,7,4
+escape room,49,17
+etherpop,4,3
+eugene indie,1,1
+europop,1,1
+experimental,1,1
+experimental hip hop,3,3
+experimental pop,1,1
+experimental r&b,1,1
+filter house,1,1
+folk,23,13
+folk rock,12,9
+folk-pop,261,20
+folktronica,5,2
+freak folk,1,1
+free jazz,1,1
+fremantle indie,1,1
+french indie pop,1,1
+french indietronica,2,1
+french shoegaze,1,1
+french synthpop,1,1
+funk,121,28
+funk rock,5,2
+future bass,1,1
+g funk,4,4
+gangster rap,14,12
+garage pop,3,1
+garage rock,122,9
+garage rock revival,5,4
+gauze pop,5,4
+german pop,2,1
+glam rock,20,3
+glitch hop,1,1
+golden age hip hop,4,2
+gospel,1,1
+gospel r&b,1,1
+gospel singers,1,1
+gospel soul,1,1
+gothenburg indie,4,1
+grunge pop,1,1
+hampton roads indie,2,2
+hard bop,1,1
+hard rock,2,2
+hardcore hip hop,10,8
+harlem hip hop,1,1
+harmonica blues,1,1
+high vibe,1,1
+hip hop,133,41
+hip house,2,2
+hip pop,14,9
+hollywood,13,5
+hopebeat,1,1
+house,6,3
+houston rap,1,1
+hyperpop,2,1
+icelandic folk,8,3
+icelandic indie,16,3
+icelandic pop,7,2
+icelandic rock,9,1
+icelandic singer-songwriter,4,1
+idaho indie,2,1
+indiana indie,1,1
+indie anthem-folk,4,2
+indie dream pop,1,1
+indie electropop,1,1
+indie emo,1,1
+indie folk,357,89
+indie garage rock,8,5
+indie hip hop,2,1
+indie jazz,3,2
+indie pop,366,100
+indie pop rap,2,2
+indie poptimism,66,28
+indie psych-pop,1,1
+indie punk,16,5
+indie quebecois,7,3
+indie r&b,21,6
+indie rock,452,91
+indie rock peruano,1,1
+indie singer-songwriter,4,1
+indie soul,56,20
+indie surf,5,2
+indiecoustica,162,23
+indietronica,148,29
+industrial hip hop,2,2
+indy indie,2,2
+instrumental bluegrass,1,1
+instrumental funk,7,2
+intelligent dance music,2,1
+irish country,1,1
+irish indie rock,1,1
+irish pop,12,2
+irish rock,8,4
+irish singer-songwriter,37,6
+israeli indie,1,1
+jacksonville indie,2,2
+jam band,21,5
+jangle pop,1,1
+jazz,4,4
+jazz blues,7,3
+jazz cover,1,1
+jazz fusion,1,1
+jazz piano,1,1
+jazz pop,1,1
+jazz rap,1,1
+jazz saxophone,1,1
+jazz trumpet,2,2
+jazztronica,2,1
+jig and reel,1,1
+kc indie,10,1
+kentucky hip hop,2,1
+kiwi rock,15,4
+la indie,130,18
+la pop,12,6
+lafayette indie,1,1
+lancaster pa indie,31,1
+latin alternative,1,1
+latin rock,1,1
+lawrence ks indie,1,1
+lds youth,1,1
+lexington ky indie,1,1
+lgbtq+ hip hop,15,1
+lilith,19,7
+lo star,1,1
+lo-fi,4,3
+lo-fi indie,2,1
+maine indie,4,1
+manitoba indie,1,1
+mashup,1,1
+melancholia,35,16
+melbourne indie,3,1
+mellow gold,13,9
+meme rap,3,1
+memphis americana,1,1
+memphis soul,79,10
+merseybeat,2,2
+metropopolis,58,21
+mexican classic rock,1,1
+mexican rock,1,1
+miami hip hop,2,2
+michigan indie,1,1
+microhouse,1,1
+midwest americana,2,2
+milwaukee indie,2,2
+minneapolis indie,32,5
+minnesota hip hop,10,2
+mississippi indie,4,2
+modern alternative pop,1,1
+modern alternative rock,170,32
+modern blues,62,5
+modern blues rock,136,15
+modern chamber music,1,1
+modern dream pop,3,2
+modern folk rock,89,13
+modern funk,19,6
+modern indie folk,1,1
+modern indie pop,3,2
+modern jazz trio,2,1
+modern performance,1,1
+modern power pop,19,5
+modern rock,620,102
+moombahton,4,1
+motown,20,8
+movie tunes,9,4
+multidisciplinary,1,1
+nantes indie,1,1
+nashville indie,9,5
+nashville singer-songwriter,2,2
+nashville sound,1,1
+neo mellow,298,50
+neo r&b,3,3
+neo soul,67,24
+neo-classical,1,1
+neo-psychedelic,7,5
+neo-singer-songwriter,7,3
+neo-synthpop,7,4
+new americana,234,46
+new england americana,5,3
+new hampshire indie,1,1
+new jersey indie,4,3
+new jersey rap,2,2
+new orleans americana,2,2
+new orleans funk,3,2
+new orleans indie,1,1
+new orleans jazz,1,1
+new rave,72,13
+new romantic,2,2
+new wave,2,2
+new wave pop,2,2
+noise pop,10,6
+noise rock,1,1
+nordic soundtrack,1,1
+north carolina hip hop,3,1
+north carolina indie,6,3
+north carolina roots,9,4
+north dakota indie,8,1
+northern soul,8,2
+norwegian indie,5,2
+norwegian pop,8,3
+nu disco,3,3
+nu jazz,3,2
+nu metal,1,1
+nyc pop,20,10
+nz indie,13,2
+nz pop,3,3
+oakland hip hop,1,1
+oakland indie,7,3
+ohio hip hop,15,3
+okc indie,1,1
+old school atlanta hip hop,1,1
+old school hip hop,5,3
+olympia wa indie,2,1
+omaha indie,1,1
+one-person band,2,2
+ontario indie,1,1
+orchestral soundtrack,1,1
+orlando indie,1,1
+oth indie,1,1
+outlaw country,5,3
+palm desert scene,1,1
+pastoral,1,1
+permanent wave,150,15
+perth indie,5,4
+peruvian indie,1,1
+philly indie,9,5
+philly rap,1,1
+philly soul,1,1
+piano blues,4,1
+piano rock,142,13
+pittsburgh rap,2,1
+political hip hop,11,6
+pop,439,76
+pop dance,6,3
+pop folk,34,3
+pop punk,15,6
+pop quebecois,1,1
+pop r&b,1,1
+pop rap,61,20
+pop rock,170,35
+pop soul,11,6
+pop worship,1,1
+popgaze,2,2
+portland hip hop,2,2
+portland indie,41,5
+post-disco,1,1
+post-minimalism,1,1
+post-punk,2,2
+post-teen pop,9,6
+power pop,3,2
+power-pop punk,3,1
+progressive bluegrass,5,3
+progressive house,1,1
+progressive jazz fusion,2,1
+protopunk,1,1
+psychedelic pop,1,1
+psychedelic rock,3,3
+psychedelic soul,9,2
+punk,1,1
+punk blues,56,6
+quebec indie,4,2
+queens hip hop,3,3
+queer country,4,2
+quiet storm,28,11
+r&b,29,18
+rap,119,38
+rap latina,1,1
+reading indie,1,1
+reggae,1,1
+reggae fusion,1,1
+retro soul,68,11
+rhythm and blues,15,4
+rock,495,61
+rock en espanol,1,1
+rock independant francais,2,1
+rock keyboard,2,1
+rock-and-roll,15,5
+rockabilly,10,3
+roots reggae,1,1
+roots rock,139,20
+roots worship,4,4
+rva indie,1,1
+sacramento indie,1,1
+sad rap,7,1
+san marcos tx indie,2,1
+scandipop,1,1
+scottish singer-songwriter,1,1
+seattle indie,18,3
+second line,1,1
+sheffield indie,3,1
+shimmer pop,59,29
+shimmer psych,13,1
+shiver pop,10,7
+shoegaze,2,2
+show tunes,4,3
+singer-songwriter,38,13
+slowcore,2,1
+small room,11,5
+smooth jazz,1,1
+socal pop punk,1,1
+social media pop,1,1
+soft rock,6,5
+soul,171,33
+soul blues,80,5
+soul flow,1,1
+soundtrack,3,3
+south carolina indie,10,4
+southampton indie,2,1
+southern hip hop,16,16
+southern soul,97,15
+spirituals,2,1
+stl indie,4,1
+stomp and flutter,35,3
+stomp and holler,639,120
+stomp and whittle,1,1
+stomp pop,42,4
+stoner metal,1,1
+stoner rock,1,1
+straight-ahead jazz,1,1
+street band,1,1
+sudanese hip hop,1,1
+sudanese pop,2,2
+sunnlensk tonlist,4,1
+supergroup,1,1
+swamp pop,1,1
+swamp rock,9,1
+swedish americana,5,2
+swedish country,1,1
+swedish indie folk,5,2
+swedish indie pop,4,1
+swedish indie rock,3,2
+swedish singer-songwriter,8,2
+swing,2,2
+sydney indie,14,2
+synth funk,5,1
+texas blues,22,2
+texas country,1,1
+texas pop punk,1,1
+toronto indie,4,2
+traditional blues,3,2
+traditional funk,1,1
+traditional soul,1,1
+transpop,1,1
+trap,7,7
+trap queen,15,4
+trap soul,1,1
+trip hop,2,2
+tropical house,8,5
+tucson indie,1,1
+tulsa indie,1,1
+turntablism,4,4
+uk alternative hip hop,1,1
+uk alternative pop,16,3
+uk americana,45,3
+uk bass,1,1
+uk contemporary jazz,3,2
+uk contemporary r&b,7,4
+uk dance,2,2
+uk pop,16,3
+underground hip hop,10,7
+urban contemporary,19,13
+vancouver indie,10,5
+vapor house,1,1
+vapor pop,3,2
+vapor soul,17,14
+vapor twitch,4,4
+vermont indie,12,7
+victoria bc indie,4,2
+viral pop,9,4
+viral rap,1,1
+vocal jazz,4,1
+waiata mo tamariki,1,1
+washington indie,14,2
+welsh indie,1,1
+west coast rap,19,6
+western americana,1,1
+western mass indie,1,1
+wisconsin indie,8,2
+wonky,2,2
+worship,112,1

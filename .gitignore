@@ -2,3 +2,4 @@ data/api-keys.json
 *.gdoc
 .DS_Store
 **/.DS_Store
+**/.ipynb_checkpoints/

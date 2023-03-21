@@ -8,4 +8,6 @@ Feel free to download/fork these scripts and try it on your own library.
 
 ![Visualization of the different genres listed on Spotify in two dimensional genre space, based on "Every Noise At Once"](enao-all-map-latest.jpg)
 
+![Visualization of my genre tastes on Spotify in two dimensional genre space, based on "Every Noise At Once"](bt-genre-map-latest.jpg)
+
 
