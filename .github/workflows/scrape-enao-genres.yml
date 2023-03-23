@@ -31,7 +31,7 @@ jobs:
           key: r-cache-cleaner
       - name: Install Packages
         run: |
-          install.packages(c("dplyr", "tidyr", "scales", "ggplot2"))
+          install.packages(c("dplyr", "tidyr", "scales", "ggplot2", "here"))
         shell: Rscript {0}
       - name: Run Genre Mapping Script
         run: Rscript scripts/visualize-genre-map.R
